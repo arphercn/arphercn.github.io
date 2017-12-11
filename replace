@@ -39,7 +39,7 @@ for path, dirs, files in os.walk(os.path.abspath(dir_html)):
             s = f.read()
         print path    
         s = s.replace(root_org, site_base)
-        s = pat_link.sub('href="' + path + '/' + r'\1' + '"', s)
+        s = pat_link.sub('target="_blank" href="' + path + '/' + r'\1' + '"', s)
         s = s.replace(root_html, site_code)
         with open(filepath, "w") as f:
             f.write(s)
