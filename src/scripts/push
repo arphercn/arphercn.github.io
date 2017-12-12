@@ -1,7 +1,7 @@
 #!/bin/bash
-# publish org files.
 
 
+cd ~/Documents/blog/
 git pull origin master
 
 git add .

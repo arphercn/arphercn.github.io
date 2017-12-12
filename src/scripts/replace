@@ -9,8 +9,12 @@ site_base = 'https://arphercn.github.io/'
 site_code = 'https://github.com/arphercn/arphercn.github.io/blob/master/'
 root_org  = '/home/arpher/blog/'
 root_html = '/home/arpher/Documents/blog/'
-dir_html  = './'
-pat_link  = re.compile(r'href="\./([\w\.-]+)"')
+
+# format href="./bbbb"
+# pat_link  = re.compile(r'href="\./([\w\.-]+)"')
+# format href="bbbb"
+pat_link  = re.compile(r'href="([\w\.-]+)"')
+
 
 # https://stackoverflow.com/questions/4205854/python-way-to-recursively-find-and-replace-string-in-text-files
 # def findReplace(directory, find, replace, filePattern):
@@ -23,7 +27,7 @@ pat_link  = re.compile(r'href="\./([\w\.-]+)"')
 #             with open(filepath, "w") as f:
 #                 f.write(s)
 
-# findReplace(dir_html, root_html, site_base, '*.html')
+# findReplace(root_html, root_html, site_base, '*.html')
 
 
 # str = 'src="./bbbb.jpg" cd lalala href="./xyz.php" eee href="./factory"'
@@ -32,7 +36,7 @@ pat_link  = re.compile(r'href="\./([\w\.-]+)"')
 # pat_link = re.compile(r'href="\./([\w\.-]+)"')
 # print pat_link.sub('href="' + site_code + r'\1' + '"', str)
 
-for path, dirs, files in os.walk(os.path.abspath(dir_html)):
+for path, dirs, files in os.walk(os.path.abspath(root_html)):
     for filename in fnmatch.filter(files, '*.html'):
         filepath = os.path.join(path, filename)
         with open(filepath) as f:
