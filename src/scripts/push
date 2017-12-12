@@ -5,5 +5,5 @@ cd ~/Documents/blog/
 git pull origin master
 
 git add .
-git commit -a -m '...'
+git commit -m '...'
 git push origin master
