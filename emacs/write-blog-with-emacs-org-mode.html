@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>使用emacs org-mode搭建博客</title>
-<!-- 2017-12-13 三 23:07 -->
+<!-- 2017-12-16 六 20:19 -->
 <meta  charset="utf-8">
 <meta  name="generator" content="Org-mode">
 <meta  name="author" content="Bear Arpher">
@@ -19,11 +19,16 @@
 <ul>
 <li><a href="#sec-1">1. 需求</a></li>
 <li><a href="#sec-2">2. 优点</a></li>
-<li><a href="#sec-3">3. 博客功能测试</a></li>
+<li><a href="#sec-3">3. 博客功能测试</a>
+<ul>
+<li><a href="#sec-3-1">3.1. 代码高亮</a></li>
+<li><a href="#sec-3-2">3.2. <span class="todo TODO">TODO</span> 引用代码文件</a></li>
+<li><a href="#sec-3-3">3.3. <span class="done DONE">DONE</span> 让博客适配手机端</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
-
 <div id="outline-container-sec-1" class="outline-2">
 <h2 id="sec-1"><span class="section-number-2">1</span> 需求</h2>
 <div class="outline-text-2" id="text-1">
@@ -65,18 +70,13 @@
 </tbody>
 </table>
 
-
-
 <p>
 当代人过分依赖视觉，近乎于迷信。“眼见为实”，听起来理所当然，但也成了一个陷阱。出于惯性，人们将新的视觉信息自动纳入原有的观念框架，捍卫“明摆着”的证据，却“对不合口味的证据视而不见”。当你说 I See，也许既没有“看见”，也没有“明白”。<br >
 </p>
 
 <p>
-1122334455667788990011223344556677889911223344556677889900112233445511223344556677889911223344556677889911223344<br >
-</p>
-
-
-<p>
+112233 445566778899 00112233445 566778899112 233445566778899 001122334455112 23344556677 88991122334455 66778899 11223344<br >
+22 33 44 55<br >
 写作方便<sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup><br >
   易搜索<br >
   能显示图片，代码高亮<br >
@@ -103,9 +103,9 @@ emacs org-mode的优点，显示图片，代码高亮<br >
 <div id="outline-container-sec-3" class="outline-2">
 <h2 id="sec-3"><span class="section-number-2">3</span> 博客功能测试</h2>
 <div class="outline-text-2" id="text-3">
-<p>
-代码高亮<br >
-</p>
+</div><div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> 代码高亮</h3>
+<div class="outline-text-3" id="text-3-1">
 <div class="org-src-container">
 
 <pre class="src src-js"><span style="color: #C678DD;">var</span> <span style="color: #E06C75;">app4</span> = <span style="color: #C678DD;">new</span> <span style="color: #E5C07B;">Vue</span>({
@@ -120,15 +120,16 @@ emacs org-mode的优点，显示图片，代码高亮<br >
 })
 </pre>
 </div>
-<p>
-引用代码文件<a href="./demo.php">./demo.php</a><br >
-引用代码文件 <a target="_blank" href="https://github.com/arphercn/arphercn.github.io/blob/master/emacs/demo.php">demo.php</a><br >
-</p>
+</div>
+</div>
 
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> <span class="todo TODO">TODO</span> 引用代码文件</h3>
+<div class="outline-text-3" id="text-3-2">
 <p>
-引用代码文件夹 <a target="_blank" href="https://github.com/arphercn/arphercn.github.io/blob/master/emacs/factory">factory</a><br >
+引用代码文件 <a target="_blank" href="https://github.com/arphercn/blog/blob/master/emacs/demo.php">demo.php</a><br >
+引用代码文件夹 <a target="_blank" href="https://github.com/arphercn/blog/blob/master/emacs/factory">factory</a><br >
 </p>
-
 
 
 <div id="BBBB" class="figure">
@@ -138,8 +139,40 @@ emacs org-mode的优点，显示图片，代码高亮<br >
 </div>
 
 <p>
-在 org-mode 中，提供了一個 org-toggle-inline-images (C-c C-x C-v)的命令<br >
+在 org-mode 中，提供了一個 org-toggle-inline-images (C-c C-x C-v)的命令,可以快速显示图片<br >
 </p>
+</div>
+</div>
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> <span class="done DONE">DONE</span> 让博客适配手机端</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>设置emacs定制导出html格式<br >
+<ul class="org-ul">
+<li><code>[&#xa0;]</code> 修改myinit.el设置html通过<br >
+</li>
+<li><code>[X]</code> 模板muse插件实现导出html<br >
+</li>
+</ul>
+</li>
+<li>直接通过现有PC端css修改<br >
+<ul class="org-ul">
+<li>配置通过chrome浏览器实时修改css功能<br >
+</li>
+<li>梳理博客PC端css<br >
+</li>
+<li>编写手机端css<br >
+<ul class="org-ul">
+<li>配置手机端可以实时查看<br >
+</li>
+<li>按每次写的博客内容调整手机端css<br >
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <div id="footnotes">
