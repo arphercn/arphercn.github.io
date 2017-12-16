@@ -118,7 +118,7 @@ dt {
 }
 
 table {
-	margin: auto;
+	margin: 12px auto;
 	border-top: 2px solid;
 	border-collapse: collapse
 }
