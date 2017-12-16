@@ -15,7 +15,7 @@ body {
 	background-color: #eee;
 }
 
-@media (min-width:1099px) {
+@media (min-width:1098px) {
 	body {
 		width: 67%
 	}
@@ -28,6 +28,11 @@ body {
 	border-right: 1px #ccc solid;
 	border-bottom: 1px #ccc solid;
 	background-color: #fff;
+}
+
+h1 {
+	font-size: 1.5em;
+	margin: .67em 0;
 }
 
 h2,h3,h4,h5,h6 {
@@ -151,10 +156,6 @@ dfn {
 	font-style: italic
 }
 
-h1 {
-	font-size: 1.5em;
-	margin: .67em 0;
-}
 
 mark {
 	background-color: #ff0;
