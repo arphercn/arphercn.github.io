@@ -1,18 +1,14 @@
 /* http://gongzhitaao.org/orgcss/org.css */
 
-html {
-	font-family: sans-serif;
-	line-height: 1.15;
-	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%
-}
 
 body {
-	width: 100%;
 	margin: 0 auto;
-	font: normal normal normal 18px/1.6em Georgia,serif;
 	color: #333;
 	background-color: #eee;
+	font-family: lucida grande,lucida sans unicode,lucida,helvetica,Hiragino Sans GB,
+	             Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+	line-height: 1.8rem;
+	font-size: 1rem;
 }
 
 @media (min-width:1098px) {
@@ -29,36 +25,34 @@ body {
 	border-bottom: 1px #ccc solid;
 	background-color: #fff;
 }
-        
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 700;
+	color: #574c4c;
+}  
+
 h1 {
-	font-size: 1.99em;
-	margin: .67em 0;
+    line-height: 35px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-size: 1.5rem;
+}
+
+
+
+h3,h4,h5,h6 {
+	margin-top: 10px;
+    padding-bottom: 5px;
+	font-size: 17px;
+	font-size: 1.1rem;
 }
 
 h2 {
-	font-size: 1.1em
-}
-
-h3,h4,h5,h6 {
-	font-size: 1em
-}
-
-h2,h3,h4,h5,h6 {
-	/*color: #a5573e;*/
-	line-height: 1.2em;
-	font-family: Helvetica,sans-serif;
-	-webkit-margin-before: .5em;
-    -webkit-margin-after: .3em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-}
-
-p {
-    display: block;
-    -webkit-margin-before: .3em;
-    -webkit-margin-after: .3em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
+	margin-top: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+	font-size: 18px;
+	font-size: 1.1875rem;
 }
 
 ul, menu, dir {
@@ -919,7 +913,6 @@ textarea {
 
 .title {
 	margin: auto;
-	color: #000
 }
 
 .subtitle,.title {
@@ -928,7 +921,6 @@ textarea {
 
 .subtitle {
 	font-size: medium;
-	font-weight: 700
 }
 
 .abstract {
