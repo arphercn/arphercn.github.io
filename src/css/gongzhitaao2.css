@@ -1,28 +1,32 @@
-/* http://gongzhitaao.org/orgcss/org.css */
 
+
+html{
+	font-size:16px;
+}
 
 body {
+	width: 67%;
 	margin: 0 auto;
 	color: #333;
 	background-color: #eee;
-	font-family: lucida grande,lucida sans unicode,lucida,helvetica,Hiragino Sans GB,
-	             Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
-	line-height: 1.8rem;
-	font-size: 1rem;
+	font-family: Monaco,Microsoft YaHei;
+	line-height: 1.8em;
+	font-size: 1em;
 }
 
-@media (min-width:1098px) {
+@media (max-width:990px) {
 	body {
-		width: 67%
+		-webkit-text-size-adjust: none;
+		width: 100%;
+		line-height: 2em;
+		font-size: 2.5em;
 	}
 }
 
 #content {
 	margin-bottom: 36px;
 	padding:4% 6%;
-	border-left: 1px #ccc solid;
-	border-right: 1px #ccc solid;
-	border-bottom: 1px #ccc solid;
+	border: 1px #ccc solid;
 	background-color: #fff;
 }
 
@@ -32,27 +36,22 @@ h1,h2,h3,h4,h5,h6 {
 }  
 
 h1 {
-    line-height: 35px;
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-size: 1.5rem;
+    line-height: 2em;
+    margin-bottom: 1em;
+    font-size: 1.2em;
 }
-
-
 
 h3,h4,h5,h6 {
 	margin-top: 10px;
     padding-bottom: 5px;
-	font-size: 17px;
-	font-size: 1.1rem;
+	font-size: 1em;
 }
 
 h2 {
 	margin-top: 20px;
     padding-bottom: 5px;
     border-bottom: 1px solid #ddd;
-	font-size: 18px;
-	font-size: 1.1875rem;
+	font-size: 1.1em;
 }
 
 ul, menu, dir {
@@ -98,7 +97,7 @@ ul li{
 .org-src-container>pre:before {
 	display: block;
 	position: absolute;
-	/*background-color: #b3b3b3;*/
+	background-color: #b3b3b3;
 	top: 0;
 	right: 0;
 	padding: 0 .5em;
